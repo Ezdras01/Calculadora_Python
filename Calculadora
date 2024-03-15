@@ -1,3 +1,4 @@
+from math import *
 from functs import *
 
 numero1=int(input("ingresa un número:"))
