@@ -15,3 +15,7 @@ def division( num1, num2):
     else:
         resultado = round(num1/num2, 3)
         return resultado
+
+def salir():
+    return "Hasta luego"
+    functs.exit()
