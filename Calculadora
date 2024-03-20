@@ -3,12 +3,17 @@ from functs import *
 from Menu import *
 print("Bienvenido a la calculadora")
 print(" \n")
-numero1=float(input("ingresa un número:"))
-numero2=float(input("ingresa otro número:"))
-
-eleccion= 0
-continuar= 1
-pase= 1
+try:
+	numero1 = float(input("ingresa un número:"))
+except ValueError:
+	print("la entrada no es un número")
+try:
+	numero2 = float(input("ingresa otro número:"))
+except ValueError:
+	print("la entrada no es un número")
+eleccion = 0
+continuar = 1
+pase = 1
 while continuar == 1:
 	print("""Indique la operacion a realizar:
 	1.- Suma
@@ -36,6 +41,7 @@ while continuar == 1:
 	elif eleccion == 5:	
 		numero1=int(input("ingresa un número:"))
 		numero2=int(input("ingresa otro número:"))
+		print(" \n")
 		pase = 0
 	elif eleccion == 6:
 		print(" \n")
