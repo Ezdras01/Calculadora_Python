@@ -5,8 +5,9 @@ numero1=float(input("ingresa un número:"))
 numero2=float(input("ingresa otro número:"))
 
 eleccion= 0
-
-while True:
+continuar= 1
+pase= 1
+while continuar == 1:
 	print("""Indique la operacion a realizar:
 	1.- Suma
 	2.- Resta 
@@ -33,16 +34,23 @@ while True:
 	elif eleccion == 5:	
 		numero1=int(input("ingresa un número:"))
 		numero2=int(input("ingresa otro número:"))
-	elif eleccion >= 7:
+		pase = 0
+	elif eleccion == 6:
 		print(" \n")
-		print("Opción no válida")
+		print("Gracias por usar la calculadora")
 		print(" \n")
 	else:
 		print(" \n")
-		print("Hasta luego")
-		break
-
-	if input("\n deseas hacer otra operación? (si/no):") == "no":
-		pass
-	print("\n gracias por usar la calculadora\n")
-	break
+		print("Opción no válida, intente de nuevo\n")
+		continuar = 0
+	while pase == 1:
+		a = input("\n deseas hacer otra operación? (y/n):")
+		if (a == 'y'):
+			pase = 0
+		elif (a == 'n'):
+			print("\n gracias por usar la calculadora\n")
+			pase = 0
+			continuar = 0
+		else:
+			print("\n opción no válida\n")
+	pase = 1
