@@ -48,7 +48,7 @@ while continuar == 1:
 		if (a == 'y'):
 			pase = 0
 		elif (a == 'n'):
-			print("\n gracias por usar la calculadora\n")
+			print("\n Gracias por usar la calculadora\n")
 			pase = 0
 			continuar = 0
 		else:
