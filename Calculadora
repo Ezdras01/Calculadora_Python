@@ -3,14 +3,24 @@ from functs import *
 from Menu import *
 print("Bienvenido a la calculadora")
 print(" \n")
-try:
-	numero1 = float(input("ingresa un número:"))
-except ValueError:
-	print("la entrada no es un número")
-try:
-	numero2 = float(input("ingresa otro número:"))
-except ValueError:
-	print("la entrada no es un número")
+
+numero1 = None
+
+while True:
+	if numero1 == None:
+		try:
+			numero1 = float(input("ingresa primer número:"))
+		except ValueError:
+			print("la entrada no es un número")	
+			continue
+	try:
+		numero2 = float(input("ingresa segundo número:"))
+		break
+	except ValueError:
+		print("la entrada no es un número")
+		continue
+
+
 eleccion = 0
 continuar = 1
 pase = 1
@@ -39,14 +49,27 @@ while continuar == 1:
 		print(" \n")
 		print("La división de ",numero1,"/", numero2,"es:", division(numero1,numero2))		
 	elif eleccion == 5:	
-		numero1=int(input("ingresa un número:"))
-		numero2=int(input("ingresa otro número:"))
+		numero1 = None
+		while True:
+			if numero1 == None:
+				try:
+					numero1 = float(input("ingresa primer número:"))
+				except ValueError:
+					print("la entrada no es un número")	
+					continue
+			try:
+				numero2 = float(input("ingresa segundo número:"))
+				break
+			except ValueError:
+				print("la entrada no es un número")
+				continue
 		print(" \n")
 		pase = 0
 	elif eleccion == 6:
 		print(" \n")
 		print("Gracias por usar la calculadora")
 		print(" \n")
+		break
 	else:
 		print(" \n")
 		print("Opción no válida, intente de nuevo\n")
@@ -62,3 +85,4 @@ while continuar == 1:
 		else:
 			print("\n opción no válida\n")
 	pase = 1
+	
