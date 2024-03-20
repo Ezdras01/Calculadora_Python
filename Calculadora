@@ -53,12 +53,12 @@ while continuar == 1:
 		while True:
 			if numero1 == None:
 				try:
-					numero1 = float(input("ingresa primer número:"))
+					numero1 = float(input("Ingresa un nuevo primer número:"))
 				except ValueError:
 					print("la entrada no es un número")	
 					continue
 			try:
-				numero2 = float(input("ingresa segundo número:"))
+				numero2 = float(input("Ingresa un nuevo segundo número:"))
 				break
 			except ValueError:
 				print("la entrada no es un número")
