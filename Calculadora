@@ -42,5 +42,7 @@ while True:
 		print("Hasta luego")
 		break
 
-	if input("deseas hacer otra operación? (si/no):") == "no":
-		break
+	if input("\n deseas hacer otra operación? (si/no):") == "no":
+		pass
+	print("gracias por usar la calculadora")
+	break
