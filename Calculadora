@@ -33,7 +33,7 @@ while True:
 	elif eleccion == 5:	
 		numero1=int(input("ingresa un número:"))
 		numero2=int(input("ingresa otro número:"))
-	if eleccion != 6:
+	elif eleccion >= 7:
 		print(" \n")
 		print("Opción no válida")
 		print(" \n")
