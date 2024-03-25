@@ -33,56 +33,59 @@ while continuar == 1:
 	5.- Cambiar valores
 	6.- Salir""")
 
-	eleccion=int(input("\nTu elección es:"))
+	try:
+		eleccion=int(input("\nTu elección es:"))
 
-
-	if eleccion == 1:
-		print(" \n")
-		print("La suma de ",numero1,"+", numero2,"es:", suma(numero1,numero2))
-	elif eleccion == 2:
-		print(" \n")
-		print("La resta de ",numero1,"-", numero2,"es:", resta(numero1,numero2))
-	elif eleccion == 3:
-		print(" \n")
-		print("La multiplicación de ",numero1,"*", numero2,"es:", multiplicacion(numero1,numero2))	
-	elif eleccion == 4:
-		print(" \n")
-		print("La división de ",numero1,"/", numero2,"es:", division(numero1,numero2))		
-	elif eleccion == 5:	
-		numero1 = None
-		while True:
-			if numero1 == None:
+		if eleccion == 1:
+			print(" \n")
+			print("La suma de ",numero1,"+", numero2,"es:", suma(numero1,numero2))
+		elif eleccion == 2:
+			print(" \n")
+			print("La resta de ",numero1,"-", numero2,"es:", resta(numero1,numero2))
+		elif eleccion == 3:
+			print(" \n")
+			print("La multiplicación de ",numero1,"*", numero2,"es:", multiplicacion(numero1,numero2))	
+		elif eleccion == 4:
+			print(" \n")
+			print("La división de ",numero1,"/", numero2,"es:", division(numero1,numero2))		
+		elif eleccion == 5:	
+			numero1 = None
+			while True:
+				if numero1 == None:
+					try:
+						numero1 = float(input("Ingresa un nuevo primer número:"))
+					except ValueError:
+						print("la entrada no es un número")	
+						continue
 				try:
-					numero1 = float(input("Ingresa un nuevo primer número:"))
+					numero2 = float(input("Ingresa un nuevo segundo número:"))
+					break
 				except ValueError:
-					print("la entrada no es un número")	
+					print("la entrada no es un número")
 					continue
-			try:
-				numero2 = float(input("Ingresa un nuevo segundo número:"))
-				break
-			except ValueError:
-				print("la entrada no es un número")
-				continue
-		print(" \n")
-		pase = 0
-	elif eleccion == 6:
-		print(" \n")
-		print("Gracias por usar la calculadora")
-		print(" \n")
-		break
-	else:
+			print(" \n")
+			pase = 0
+		elif eleccion == 6:
+			print(" \n")
+			print("Gracias por usar la calculadora")
+			print(" \n")
+			break
+		else:
+			print(" \n")
+			print("Opción no válida, intente de nuevo\n")
+			continuar = 0
+		while pase == 1:
+			a = input("\n deseas hacer otra operación? (y/n):")
+			if (a == 'y'):
+				pase = 0
+			elif (a == 'n'):
+				print("\n Gracias por usar la calculadora\n")
+				pase = 0
+				continuar = 0
+			else:
+				print("\n opción no válida\n")
+		pase = 1
+	except ValueError:
 		print(" \n")
 		print("Opción no válida, intente de nuevo\n")
-		continuar = 0
-	while pase == 1:
-		a = input("\n deseas hacer otra operación? (y/n):")
-		if (a == 'y'):
-			pase = 0
-		elif (a == 'n'):
-			print("\n Gracias por usar la calculadora\n")
-			pase = 0
-			continuar = 0
-		else:
-			print("\n opción no válida\n")
-	pase = 1
-	
+		continuar = 1
