@@ -11,7 +11,7 @@ while True:
 		try:
 			numero1 = float(input("ingresa primer número:"))
 		except ValueError:
-			print("la entrada no es un número")	
+			print("El primer horario no es un valido")	
 			continue
 	try:
 		numero2 = float(input("ingresa segundo número:"))
